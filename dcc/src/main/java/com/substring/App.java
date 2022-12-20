@@ -18,12 +18,22 @@ public class App
         String sub = "abr";
         int strSize = str.length();
         int subSize = sub.length();
+        // List to store beginning indices
         LinkedList<Integer> list = new LinkedList<Integer>();
         // Loop through each index anf check if there's an occurance of sub
         for (int i = 0; i < strSize; i++){
+            // If reaching end of word
             if (strSize - i < strSize ){
                 break;
             }
+            // Check each index to see if substr exists
+            if (str.substring(i, (i+subSize)) == sub){
+                // Add beginning index to list
+                list.add(i);
+            }
+        }
+        for(Integer item: list){
+            System.out.println(item);
         }
     }
 }
