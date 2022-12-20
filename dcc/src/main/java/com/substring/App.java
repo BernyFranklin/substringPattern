@@ -23,11 +23,11 @@ public class App
         // Loop through each index anf check if there's an occurance of sub
         for (int i = 0; i < strSize; i++){
             // If reaching end of word
-            if (strSize - i < strSize ){
+            if (strSize - i < subSize ){
                 break;
             }
             // Check each index to see if substr exists
-            if (str.substring(i, (i+subSize)) == sub){
+            if (str.substring(i, (i+subSize)).compareTo(sub) == 0){
                 // Add beginning index to list
                 list.add(i);
             }
