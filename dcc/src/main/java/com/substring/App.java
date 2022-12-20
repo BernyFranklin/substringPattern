@@ -14,7 +14,7 @@ public class App
     public static void main( String[] args )
     {
         // Creating local variables
-        String str = "abracadabra";
+        String str = "abracadabraabracadabra";
         String sub = "abr";
         int strSize = str.length();
         int subSize = sub.length();
@@ -32,6 +32,7 @@ public class App
                 list.add(i);
             }
         }
+        // Print each item in the list
         for(Integer item: list){
             System.out.println(item);
         }
